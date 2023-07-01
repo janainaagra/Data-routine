@@ -67,7 +67,6 @@ levels(dados$Parâmetros)
 #Conversão de nomes----
 #os parâmetros tem muitos nomes errados, preciso padronizar tudo!
 
-#?????????????????????? 
 
 #Salvar os arquivos após manipulação----
 # Salvando em .RData
@@ -107,43 +106,6 @@ dados_1 <- dados_1 %>%
 
 dados_1 <- dados_1[ , -c(2:8, 10, 12, 17, 24:26, 47, 48)]
 
-dados_1 <- dados_1 %>% 
-  rename(empresa = "Empresa", 
-         tipo_empreendimento = "Tipo.do.empreendimento",
-         empreendimento = "Empreendimento.y",
-         cidade = "Municipio",
-         estado = "Estado.y",
-         bacia = "Bacia",
-         curso = "CursoDagua",
-         classe = "Classificação.CONAMA",
-         status = "Status.do.Sítio.amostral",
-         ambiente = "Tipo.de.ambiente",
-         posicao = "Posicao",
-         perfil = "Perfil.Coletado",
-         site = "site",
-         lat = "Coordenadas.LAT",
-         long = "Coordenadas.LONG",
-         zona = "Zona",
-         prof_total = "Profundidade.Total.do.Sítio.Amostral",
-         ano = "Ano",
-         mes = "Mês",
-         dia = "Dia",
-         hora = "Hora",
-         rede = "Rede.de.coleta",
-         periodici = "Periodicidade",
-         sazonal = "Sazonalidade",
-         parameter = "Parâmetros",
-         unidade = "Unidade.de.medida",
-         sinal = "Sinal",
-         result = "Resultado",
-         analise_tipo = "Tipo.de.análise",
-         atividade = "Atividade",
-         obs1 = "Observações",
-         obs2 = "Observação",
-         regiao = "Região.de.Coleta",
-         cod_ana = "Codigo.ANA",
-         grupo = "Grupo.amostragem") %>% 
-  mutate(prof_total = replace(prof_total, prof_total == "N.A.", "NA"))
 
 #quer reorganizar a planilha usando o select, mas nao funciona
 
